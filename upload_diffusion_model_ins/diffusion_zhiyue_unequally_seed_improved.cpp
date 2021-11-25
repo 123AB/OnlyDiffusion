@@ -319,11 +319,11 @@ tuple<double, double,list<User*>,list<User*>> temporal_effect_Algorithm_improved
 int main(int argc, char* argv[]){
     // network, seed_file, k, rho, sampling
     //string fileName = "intensityc";
-    //string fileName= "intensityc";
+    string fileName= "intensityc";
     //string fileName= "pagerankc";
     //string fileName = "hindexl";
     //string fileName = "hindexc";
-    string fileName = "indegreec";
+    //string fileName = "indegreec";
     //string fileName = "pagerankc";
 
     int k = -1;
@@ -356,7 +356,7 @@ int main(int argc, char* argv[]){
     //int seed_size[1] = {200};
 
     //int seed_size[1] = {100};
-    int filePiece = 557;
+    int filePiece = 546;
     //double influenced_ratio[11] = {0.3213528663326579, 0.33423478592970113, 0.35605988875551187, 0.332916605980746, 0.3314512691495212, 0.3295193762640396, 0.30580706950207154, 0.3378309674169654, 0.3309098002505501, 0.3269442260561221, 0.3865983587976605};
     //double seed_ratio[24] = {0.03815288827308658, 0.038658781088945375, 0.039006631384175226, 0.038849252741330484, 0.03903426440717119, 0.03926945315487026, 0.03982432360451349, 0.04030870973782025, 0.04064017270648738, 0.0409995238488661, 0.04136673272738872, 0.0416933047670591, 0.04216214874270481, 0.04253551852701059, 0.04273680769153719, 0.04303485655464194, 0.04344230252494714, 0.04369446176632122, 0.04389095175182407, 0.04410581366116462, 0.04410158067375313, 0.044146326552655005, 0.04417478789384402, 0.04417040521788208};
     double seed_ratio[12] = {0.05671172670751998, 0.08797285272479766, 0.07034811460994941, 0.08022840919860938, 0.08329043932290775, 0.0884038377870173, 0.10746663873818907, 0.08548126161185657, 0.0858406110369326, 0.08166535902475652, 0.0912369954974133, 0.08135375374005048};
@@ -366,7 +366,8 @@ int main(int argc, char* argv[]){
     //double scaling_parameter[15] = {1.1,1.1,1.2,1.2,1.2,1.3,1.3,1.5,1.5,1.6,1.6,1.7,1.7,1.7,1.7};
 
     //double scaling_parameter[15] = {1.1,1.1,1.2,1.2,1.2,1.3,1.3,1.4,1.4,1.5,1.5,1.6,1.6,1.6,1.6};
-    double scaling_parameter[15] = {1.0,1.0,1.1,1.1,1.1,1.2,1.2,1.3,1.3,1.4,1.4,1.5,1.5,1.5,1.5};
+    //double scaling_parameter[15] = {1.0,1.0,1.1,1.1,1.1,1.2,1.2,1.3,1.3,1.4,1.4,1.5,1.5,1.5,1.5};
+    double scaling_parameter[12] = {1.0,1.0,1.0,1.1,1.1,1.2,1.2,1.3,1.3,1.4,1.4,1.5};
     //double ratio_list[11] = {0.23, 0.57, 0.18, 0.6, 0.35, 0.76, 0.48, 0.28, 0.17, 0.22,0.4};
     double ratio_list[11] = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9,1.0};
 
@@ -398,19 +399,19 @@ int main(int argc, char* argv[]){
             //created by zhiyue zhang
             //cut file into five pieces
 
-            for(int i = 533; i <= filePiece; i++){
-                int seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-533]);
+            for(int i = 535; i <= filePiece; i++){
+                int seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-535]);
                 if(ratio<0.5){
                     //seed_limit = ceil(seed_size[seed_size_len] * seed_ratio_improved[i-197]);
                     seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 533]);
                 }
                 else {
-                    if (i < 542) {
-                        seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 533]);
+                    if (i < 540) {
+                        seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 535]);
 
                     } else {
-                        //seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 533]);
-                        seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 533]) * scaling_parameter[i - 542];
+                        //seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 535]);
+                        seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 535]) * scaling_parameter[i - 540];
                         //seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-197]);
                         //cout << "Seed limit:" << seed_limit;
                     }
