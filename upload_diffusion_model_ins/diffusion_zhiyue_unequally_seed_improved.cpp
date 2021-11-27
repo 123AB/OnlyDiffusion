@@ -382,7 +382,7 @@ int main(int argc, char* argv[]){
     //int chunk_fileSize = totalFileNum / filePiece;
 
     //for (double ratio = 1.0; ratio<=1.0; ratio = ratio + 0.1){
-    for (int ratio_size_len = 0; ratio_size_len<sizeof(ratio_list)/sizeof(ratio_list[0]); ratio_size_len = ratio_size_len + 1){
+    for (int ratio_size_len = 3; ratio_size_len<sizeof(ratio_list)/sizeof(ratio_list[0]); ratio_size_len = ratio_size_len + 1){
         double ratio = ratio_list[ratio_size_len];
         //for (int influenced_ratio = 0; influenced_ratio<sizeof(seed_size)/sizeof(seed_size[0]); influenced_ratio = influenced_ratio + 1){
         for(int seed_size_len = 0; seed_size_len<sizeof(seed_size)/sizeof(seed_size[0]); seed_size_len = seed_size_len + 1){
