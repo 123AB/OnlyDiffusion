@@ -322,9 +322,9 @@ int main(int argc, char* argv[]){
     //string fileName= "intensityc";
     //string fileName= "pagerankc";
     //string fileName = "hindexl";
-    //string fileName = "hindexc";
+    string fileName = "hindexc";
     //string fileName = "indegreec";
-    string fileName = "pagerankc";
+    //string fileName = "pagerankc";
 
     int k = -1;
     double rho = 1.0;
