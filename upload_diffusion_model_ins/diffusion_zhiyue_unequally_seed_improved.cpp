@@ -318,13 +318,13 @@ tuple<double, double,list<User*>,list<User*>> temporal_effect_Algorithm_improved
 
 int main(int argc, char* argv[]){
     // network, seed_file, k, rho, sampling
-    string fileName = "intensityl";
+    //string fileName = "intensityl";
     //string fileName= "intensityc";
     //string fileName= "pagerankc";
     //string fileName = "hindexl";
     //string fileName = "hindexc";
     //string fileName = "indegreec";
-    //string fileName = "pagerankc";
+    string fileName = "pagerankc";
 
     int k = -1;
     double rho = 1.0;
@@ -431,14 +431,15 @@ int main(int argc, char* argv[]){
                 std::string strRatio = oss_ratio.str();
 
 
-                //oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
-                oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
+                oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
+                //oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
 
-                //oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
-                oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
+                oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
+                //oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
 
                 //oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
-                oss_seed << "../student_preprocess/intensity_temporal_ins/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                //oss_seed << "../student_preprocess/intensity_temporal_ins/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                oss_seed << "../student_preprocess/target_hindex_temporal_ins/diversity_month_hi_index_ins/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
 
                 std::string var_seed_file = oss_seed.str();
