@@ -318,9 +318,9 @@ tuple<double, double,list<User*>,list<User*>> temporal_effect_Algorithm_improved
 
 int main(int argc, char* argv[]){
     // network, seed_file, k, rho, sampling
-    string fileName = "intensityl";
+    //string fileName = "intensityl";
     //string fileName= "intensityc";
-    //string fileName= "pagerankc";
+    string fileName= "pagerankc";
     //string fileName = "hindexl";
     //string fileName = "hindexc";
     //string fileName = "indegreec";
@@ -382,7 +382,7 @@ int main(int argc, char* argv[]){
     //int chunk_fileSize = totalFileNum / filePiece;
 
     //for (double ratio = 1.0; ratio<=1.0; ratio = ratio + 0.1){
-    for (int ratio_size_len = 4; ratio_size_len<sizeof(ratio_list)/sizeof(ratio_list[0]); ratio_size_len = ratio_size_len + 1){
+    for (int ratio_size_len = 3; ratio_size_len<sizeof(ratio_list)/sizeof(ratio_list[0]); ratio_size_len = ratio_size_len + 1){
         double ratio = ratio_list[ratio_size_len];
         //for (int influenced_ratio = 0; influenced_ratio<sizeof(seed_size)/sizeof(seed_size[0]); influenced_ratio = influenced_ratio + 1){
         for(int seed_size_len = 0; seed_size_len<sizeof(seed_size)/sizeof(seed_size[0]); seed_size_len = seed_size_len + 1){
@@ -431,16 +431,16 @@ int main(int argc, char* argv[]){
                 std::string strRatio = oss_ratio.str();
 
 
-                //oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
-                oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
+                oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
+                //oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
 
-                //oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
-                oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
+                oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
+                //oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
 
                 //oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
-                oss_seed << "../student_preprocess/intensity_temporal_ins/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                //oss_seed << "../student_preprocess/intensity_temporal_ins/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
                 //oss_seed << "../student_preprocess/target_hindex_temporal_ins/diversity_month_hi_index_ins/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
-                //oss_seed << "../student_preprocess/pagerank_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                oss_seed << "../student_preprocess/pagerank_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
 
                 std::string var_seed_file = oss_seed.str();
