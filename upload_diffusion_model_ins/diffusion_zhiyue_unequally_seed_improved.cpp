@@ -320,8 +320,8 @@ int main(int argc, char* argv[]){
     // network, seed_file, k, rho, sampling
     //string fileName = "intensityl";
     //string fileName= "intensityc";
-    string fileName= "pagerankl";
-    //string fileName = "hindexl";
+    //string fileName= "pagerankl";
+    string fileName = "hindexl";
     //string fileName = "hindexc";
     //string fileName = "indegreec";
     //string fileName = "pagerankc";
@@ -370,7 +370,7 @@ int main(int argc, char* argv[]){
 
     //double scaling_parameter[15] = {1.1,1.1,1.2,1.2,1.2,1.3,1.3,1.4,1.4,1.5,1.5,1.6,1.6,1.6,1.6};
     //double scaling_parameter[15] = {1.0,1.0,1.1,1.1,1.1,1.2,1.2,1.3,1.3,1.4,1.4,1.5,1.5,1.5,1.5};
-    double scaling_parameter[12] = {1.0,1.0,1.0,1.1,1.1,1.2,1.2,1.3,1.3,1.4,1.4,1.5};
+    double scaling_parameter[12] = {1.0,1.0,1.0,1.1,1.1,1.2,1.2,1.3,1.3,1.5,1.5,1.6};
     //double ratio_list[11] = {0.23, 0.57, 0.18, 0.6, 0.35, 0.76, 0.48, 0.28, 0.17, 0.22,0.4};
     double ratio_list[11] = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9,1.0};
 
@@ -383,7 +383,7 @@ int main(int argc, char* argv[]){
     //int chunk_fileSize = totalFileNum / filePiece;
 
     //for (double ratio = 1.0; ratio<=1.0; ratio = ratio + 0.1){
-    for (int ratio_size_len = 10; ratio_size_len<sizeof(ratio_list)/sizeof(ratio_list[0]); ratio_size_len = ratio_size_len + 1){
+    for (int ratio_size_len = 0; ratio_size_len<sizeof(ratio_list)/sizeof(ratio_list[0]); ratio_size_len = ratio_size_len + 1){
         double ratio = ratio_list[ratio_size_len];
         //for (int influenced_ratio = 0; influenced_ratio<sizeof(seed_size)/sizeof(seed_size[0]); influenced_ratio = influenced_ratio + 1){
         for(int seed_size_len = 0; seed_size_len<sizeof(seed_size)/sizeof(seed_size[0]); seed_size_len = seed_size_len + 1){
@@ -440,8 +440,8 @@ int main(int argc, char* argv[]){
 
                 //oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
                 //oss_seed << "../student_preprocess/intensity_temporal_ins/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
-                //oss_seed << "../student_preprocess/target_hindex_temporal_ins/diversity_month_hi_index_ins/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
-                oss_seed << "../student_preprocess/pagerank_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                oss_seed << "../student_preprocess/target_hindex_temporal_ins/diversity_month_hi_index_ins/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                //oss_seed << "../student_preprocess/pagerank_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
 
                 std::string var_seed_file = oss_seed.str();
