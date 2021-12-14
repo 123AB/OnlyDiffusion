@@ -353,8 +353,8 @@ int main(int argc, char* argv[]){
     // network, seed_file, k, rho, sampling
     //string fileName = "intensityc";
     //string fileName= "intensityl";
-    string fileName = "hindexl";
-    //string fileName= "indegreec";
+    //string fileName = "hindexl";
+    string fileName= "indegreel";
     //string fileName = "pagerankc";
 
     int k = -1;
@@ -382,9 +382,11 @@ int main(int argc, char* argv[]){
 
     //string s = std::format("{:10}", "some_string");
     //int seed_size[10] = {5,10,20,50,100,200,500,1000};
-    int seed_size[7] = {50,75,100,125,150,175,200}; //this is seed size 100
+    //int seed_size[7] = {50,75,100,125,150,175,200}; //this is seed size 100
     //int seed_size[1] = {200}; //this is seed size 200
     //int seed_size[1] = {500}; //this is seed size 500
+    int seed_size[1] = {100}; //this is seed size 100
+
 
     double ratio_counter_list[11] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0};
 
@@ -403,18 +405,20 @@ int main(int argc, char* argv[]){
     //double ratio_list_like_100[11] = {0.6827235876594109, 0.6546561032563273, 0.597801677867714, 0.6149709701590205, 0.626991915673859, 0.6656529708097136, 0.6648978419137221, 0.6607694563547546, 0.6634981659536126, 0.6674192904967401, 0.6085331920090751}; //this is ratio_like 200
     //double ratio_list_like_100[11] = {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0}; //this is ratio_like 200
     //double ratio_list_like_100[11] = {0.23, 0.57, 0.18, 0.6, 0.35, 0.76, 0.48, 0.28, 0.17, 0.22,0.4}; //this is ratio_like 200
-    double ratio_list_like_100[11] = {0.46, 0.47, 0.49, 0.45, 0.48, 0.40, 0.51, 0.44, 0.39, 0.43, 0.50}; //this is ratio_like 200
+    //double ratio_list_like_100[11] = {0.46, 0.47, 0.49, 0.45, 0.48, 0.40, 0.51, 0.44, 0.39, 0.43, 0.50}; //this is ratio_like 200
+    double ratio_list_like_100[11] = {0.64, 0.61, 0.81, 0.58, 0.29, 0.25, 0.6, 0.39, 0.49, 0.76};
     //double ratio_list_like_100[11] = {0.24602356123907565, 0.31433166039953764, 0.28039106057442076, 0.296612504108106, 0.3402596913724023, 0.37706767886926773, 0.4068635343154354, 0.4233897432597644, 0.43889368693783837, 0.45416418321257646, 0.4228166510970859};
     //double ratio_list_like_100[11] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0}; //this is ratio_like 200
 
 
     //double ratio_list_comment_100[10] = {0.539,0.534,0.532,0.528,0.529,0.531,0.532,0.535,0.539,0.545}; // this is ratio_list_comment_200
 
-    int filePiece = 220;
+    int filePiece = 546;
     //double seed_ratio[24] = {0.03815288827308658, 0.038658781088945375, 0.039006631384175226, 0.038849252741330484, 0.03903426440717119, 0.03926945315487026, 0.03982432360451349, 0.04030870973782025, 0.04064017270648738, 0.0409995238488661, 0.04136673272738872, 0.0416933047670591, 0.04216214874270481, 0.04253551852701059, 0.04273680769153719, 0.04303485655464194, 0.04344230252494714, 0.04369446176632122, 0.04389095175182407, 0.04410581366116462, 0.04410158067375313, 0.044146326552655005, 0.04417478789384402, 0.04417040521788208};
-    double seed_ratio_improved[24] = {0.03815288827308658, 0.038658781088945375, 0.039006631384175226, 0.038849252741330484, 0.03903426440717119, 0.03926945315487026, 0.03982432360451349, 0.04030870973782025, 0.04064017270648738, 0.0409995238488661, 0.04136673272738872, 0.0416933047670591, 0.04216214874270481, 0.04253551852701059, 0.04273680769153719, 0.04303485655464194, 0.04344230252494714, 0.04369446176632122, 0.04389095175182407, 0.04410581366116462, 0.04410158067375313, 0.044146326552655005, 0.04417478789384402, 0.04417040521788208};
-    double seed_ratio[24] = {0.03815288827308658, 0.038658781088945375, 0.039006631384175226, 0.038849252741330484, 0.03903426440717119, 0.03926945315487026, 0.03982432360451349, 0.04030870973782025, 0.04064017270648738, 0.0409995238488661, 0.04136673272738872, 0.0416933047670591, 0.04216214874270481, 0.04253551852701059, 0.04273680769153719, 0.04303485655464194, 0.04344230252494714, 0.04369446176632122, 0.04389095175182407, 0.04410581366116462, 0.04410158067375313, 0.044146326552655005, 0.04417478789384402, 0.04417040521788208};
-
+    double seed_ratio[12] = {0.05671172670751998, 0.08797285272479766, 0.07034811460994941, 0.08022840919860938, 0.08329043932290775, 0.0884038377870173, 0.10746663873818907, 0.08548126161185657, 0.0858406110369326, 0.08166535902475652, 0.0912369954974133, 0.08135375374005048};
+    //double seed_ratio_improved[24] = {0.03815288827308658, 0.038658781088945375, 0.039006631384175226, 0.038849252741330484, 0.03903426440717119, 0.03926945315487026, 0.03982432360451349, 0.04030870973782025, 0.04064017270648738, 0.0409995238488661, 0.04136673272738872, 0.0416933047670591, 0.04216214874270481, 0.04253551852701059, 0.04273680769153719, 0.04303485655464194, 0.04344230252494714, 0.04369446176632122, 0.04389095175182407, 0.04410581366116462, 0.04410158067375313, 0.044146326552655005, 0.04417478789384402, 0.04417040521788208};
+    //double seed_ratio[24] = {0.03815288827308658, 0.038658781088945375, 0.039006631384175226, 0.038849252741330484, 0.03903426440717119, 0.03926945315487026, 0.03982432360451349, 0.04030870973782025, 0.04064017270648738, 0.0409995238488661, 0.04136673272738872, 0.0416933047670591, 0.04216214874270481, 0.04253551852701059, 0.04273680769153719, 0.04303485655464194, 0.04344230252494714, 0.04369446176632122, 0.04389095175182407, 0.04410581366116462, 0.04410158067375313, 0.044146326552655005, 0.04417478789384402, 0.04417040521788208};
+    double scaling_parameter[12] = {1.0,1.0,1.0,1.1,1.1,1.2,1.2,1.3,1.3,1.4,1.4,1.5};
     //double scaling_parameter[15] = {1.3,1.3,1.4,1.4,1.4,1.5,1.5,1.6,1.6,1.7,1.7,1.8,1.8,1.8,1.8};
 
     //double seed_ratio[13] = {0.075,0.076,0.077,0.078,0.079,0.079,0.08,0.081,0.081,0.081,0.082,0.082,0.082};
@@ -435,21 +439,23 @@ int main(int argc, char* argv[]){
 
             //cut file into five pieces
 
-            for(int i = 197; i <= filePiece; i++){
+            for(int i = 535; i <= filePiece; i++){
 
-                int seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-197]);
-                //int seed_limit = ceil(seed_size[seed_size_len] * seed_ratio_improved[i-197]);
-                if(ratio_counter>=0.5){
-                    seed_limit = ceil(seed_size[seed_size_len] * seed_ratio_improved[i-197]);
-
+                int seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-533]);
+                if(ratio<0.5){
+                    //sed_limit = ceil(seed_size[seed_size_len] * seed_ratio_improved[i-197]);
+                    seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 535]);
                 }
-                /*
-                if(i < 206){
-                    seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-197]*scaling_parameter[i-197]);
+                else {
+                    if (i < 540) {
+                        seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 535]);
 
-                }
-                else{
-                    seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-197]*scaling_parameter[i-206]);
+                    } else {
+                        //sed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 533]);
+                        seed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i - 535]);
+                        //sed_limit = ceil(seed_size[seed_size_len] * seed_ratio[i-197]);
+                        //cout << "Seed limit:" << seed_limit;
+                    }
                 }
                 */
                 //cout << "Seed limit:" << seed_limit;
@@ -486,7 +492,7 @@ int main(int argc, char* argv[]){
 
                 //oss << "../student_preprocess/diffusion/netWorkFileYear/comment_" << i << ".csv";
                 //oss_seed << "../student_preprocess/diffusion/diversity_seed/intensity/diversity_Year/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
-                oss_first << "../student_preprocess/diffusion/oldNetworkFile/like" << ".csv";
+                //oss_first << "../student_preprocess/diffusion/oldNetworkFile/like" << ".csv";
                 //oss_first << "../student_preprocess/diffusion/netWorkFileMonth/like_" << 210 << ".csv";
 
                 //oss << "../student_preprocess/diffusion/netWorkFileSeason/comment_" << i << ".csv";
@@ -494,13 +500,13 @@ int main(int argc, char* argv[]){
                 //oss << "../student_preprocess/diffusion/netWorkFileSeason/like_" << i << ".csv";
                 //oss_seed << "../student_preprocess/diffusion/diversity_seed/intensity/diversity_season/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
-                oss << "../student_preprocess/diffusion/netWorkFileMonth/like_" << i << ".csv";
+                //oss << "../student_preprocess/diffusion/netWorkFileMonth/like_" << i << ".csv";
                 //oss_seed << "../student_preprocess/diffusion/diversity_seed/intensity/diversity_Month/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
                 //oss_seed << "../student_preprocess/pageRank_temporal/pagerank_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
                 //oss_seed << "../student_preprocess/indegree_temporal/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
                 //oss_seed << "../student_preprocess/hindex_temporal/diversity_month_hi_index/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
-                oss_seed << "../student_preprocess/target_hindex_temporal/diversity_month_hi_index/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << ratio << "-" << i << ".csv";
+                //oss_seed << "../student_preprocess/target_hindex_temporal/diversity_month_hi_index/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << ratio << "-" << i << ".csv";
                 //oss_seed << "../student_preprocess/intensity_temporal/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
 
@@ -509,7 +515,9 @@ int main(int argc, char* argv[]){
                 //oss << "../student_preprocess/diffusion/netWorkFileMonth/like_" << i << ".csv";
                 //oss_seed << "../student_preprocess/diffusion/diversity_seed/intensity/diversity_Month/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
-
+                oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
+                oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
+                oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
 
                 std::string var_seed_file = oss_seed.str();
