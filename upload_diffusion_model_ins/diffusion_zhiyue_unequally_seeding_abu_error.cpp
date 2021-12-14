@@ -457,7 +457,7 @@ int main(int argc, char* argv[]){
                         //cout << "Seed limit:" << seed_limit;
                     }
                 }
-                */
+                
                 //cout << "Seed limit:" << seed_limit;
                 //cout << "float:" << seed_ratio[i];
 
