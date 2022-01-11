@@ -353,8 +353,8 @@ int main(int argc, char* argv[]){
     // network, seed_file, k, rho, sampling
     //string fileName = "intensityc";
     //string fileName= "intensityl";
-    //string fileName = "hindexl";
-    string fileName= "indegreel";
+    string fileName = "hindexl";
+    //string fileName= "indegreel";
     //string fileName = "pagerankc";
 
     int k = -1;
