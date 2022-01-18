@@ -382,10 +382,10 @@ int main(int argc, char* argv[]){
 
     //string s = std::format("{:10}", "some_string");
     //int seed_size[10] = {5,10,20,50,100,200,500,1000};
-    //int seed_size[7] = {50,75,100,125,150,175,200}; //this is seed size 100
+    int seed_size[7] = {50,75,100,125,150,175,200}; //this is seed size 100
     //int seed_size[1] = {200}; //this is seed size 200
     //int seed_size[1] = {500}; //this is seed size 500
-    int seed_size[1] = {100}; //this is seed size 100
+    //int seed_size[1] = {100}; //this is seed size 100
 
 
     double ratio_counter_list[11] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0};
@@ -517,7 +517,8 @@ int main(int argc, char* argv[]){
 
                 oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
                 oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
-                oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                //oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
+                oss_seed << "../student_preprocess/target_hindex_temporal_ins/diversity_month_hi_index_ins/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
 
 
                 std::string var_seed_file = oss_seed.str();
