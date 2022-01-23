@@ -428,7 +428,7 @@ int main(int argc, char* argv[]){
     //int totalFileNum = 957 - 763;
     //int totalFileNum = 900 - 800;
     //int chunk_fileSize = totalFileNum / filePiece;
-    for (int ratio_size_len = 8; ratio_size_len<sizeof(ratio_list_like_100)/sizeof(ratio_list_like_100[0]); ratio_size_len = ratio_size_len + 1){
+    for (int ratio_size_len = 9; ratio_size_len<sizeof(ratio_list_like_100)/sizeof(ratio_list_like_100[0]); ratio_size_len = ratio_size_len + 1){
         double ratio = ratio_list_like_100[ratio_size_len];
         double ratio_counter = ratio_counter_list[ratio_size_len];
         for(int seed_size_len = 0; seed_size_len<sizeof(seed_size)/sizeof(seed_size[0]); seed_size_len = seed_size_len + 1){
