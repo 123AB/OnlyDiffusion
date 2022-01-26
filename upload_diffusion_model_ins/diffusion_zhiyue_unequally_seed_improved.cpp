@@ -321,8 +321,8 @@ int main(int argc, char* argv[]){
     //string fileName = "intensityl";
     //string fileName= "intensityc";
     //string fileName= "pagerankl";
-    string fileName = "hindexl";
-    //string fileName = "hindexc";
+    //string fileName = "hindexl";
+    string fileName = "hindexc";
     //string fileName = "indegreel";
     //string fileName = "pagerankc";
 
@@ -436,10 +436,10 @@ int main(int argc, char* argv[]){
 
 
                 //oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
-                oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
+                oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
 
                 //oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
-                oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
+                oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
 
                 //oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
                 //oss_seed << "../student_preprocess/intensity_temporal_ins/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
