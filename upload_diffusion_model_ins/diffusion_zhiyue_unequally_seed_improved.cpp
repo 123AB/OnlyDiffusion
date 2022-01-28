@@ -321,8 +321,8 @@ int main(int argc, char* argv[]){
     //string fileName = "intensityl";
     //string fileName= "intensityc";
     //string fileName= "pagerankl";
-    //string fileName = "hindexl";
-    string fileName = "hindexc";
+    string fileName = "hindexl";
+    //string fileName = "hindexc";
     //string fileName = "indegreel";
     //string fileName = "pagerankc";
 
@@ -353,13 +353,13 @@ int main(int argc, char* argv[]){
     //int seed_size[10] = {5,10,20,50,100,200,500,1000};
     //int seed_size[4] = {75,125,150,175};
     //int seed_size[7] = {50,75,100,125,150,175,200};
-    //int seed_size[2] = {175,200};
+    int seed_size[2] = {100,125,150};
 
     //int seed_size[3] = {150,175,200};
     //int seed_size[3] = {175,200};
 
     //int seed_size[1] = {5000};
-    int seed_size[1] = {200};
+    //int seed_size[1] = {200};
 
     //int seed_size[1] = {100};
     int filePiece = 546;
@@ -375,8 +375,8 @@ int main(int argc, char* argv[]){
     //double scaling_parameter[15] = {1.0,1.0,1.1,1.1,1.1,1.2,1.2,1.3,1.3,1.4,1.4,1.5,1.5,1.5,1.5};
     double scaling_parameter[12] = {1.0,1.0,1.0,1.1,1.1,1.2,1.2,1.3,1.3,1.5,1.5,1.6};
     //double ratio_list[11] = {0.23, 0.57, 0.18, 0.6, 0.35, 0.76, 0.48, 0.28, 0.17, 0.22,0.4};
-    //double ratio_list[11] = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9,1.0};
-    double ratio_list[2] = {0.5, 0.6};
+    double ratio_list[11] = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9,1.0};
+    //double ratio_list[2] = {0.5, 0.6};
 
     //double seed_ratio[24] = {0.036603221,0.037142637,0.037450875,0.037836172,0.038760885,0.039300301,0.039916776,0.040302073,0.04068737,0.041149726,0.041457964,0.041843261,0.042459736,0.042767974,0.042999152,0.04330739,0.043846806,0.044077984,0.044386222,0.044694459,0.044694459,0.044771519,0.044771519,0.044771519};
     /*year
@@ -437,10 +437,10 @@ int main(int argc, char* argv[]){
 
 
                 //oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
-                oss_first << "../student_preprocess/diffusion/ins_month/comment_557" << ".csv";
+                oss_first << "../student_preprocess/diffusion/ins_month/like_557" << ".csv";
 
                 //oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
-                oss << "../student_preprocess/diffusion/ins_month/comment_" << i << ".csv";
+                oss << "../student_preprocess/diffusion/ins_month/like_" << i << ".csv";
 
                 //oss_seed << "../student_preprocess/indegree_temporal_ins/indegree_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
                 //oss_seed << "../student_preprocess/intensity_temporal_ins/intensity_diversity_seed/diversity-" << fileName << "-" << seed_size[seed_size_len] << "-" << strRatio << "-" << i << ".csv";
