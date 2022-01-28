@@ -358,7 +358,8 @@ int main(int argc, char* argv[]){
     //int seed_size[3] = {150,175,200};
     //int seed_size[3] = {175,200};
 
-    int seed_size[1] = {5000};
+    //int seed_size[1] = {5000};
+    int seed_size[1] = {200};
 
     //int seed_size[1] = {100};
     int filePiece = 546;
