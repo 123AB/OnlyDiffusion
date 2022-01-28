@@ -353,7 +353,7 @@ int main(int argc, char* argv[]){
     //int seed_size[10] = {5,10,20,50,100,200,500,1000};
     //int seed_size[4] = {75,125,150,175};
     //int seed_size[7] = {50,75,100,125,150,175,200};
-    int seed_size[2] = {100,125,150};
+    int seed_size[3] = {100,125,150};
 
     //int seed_size[3] = {150,175,200};
     //int seed_size[3] = {175,200};
